@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background: var(--primary);
+    color: #fff;
+}
+
+.logo{
+    height: 3em;
+    margin: 10px 0 10px 32px;
+    
+}
+
+.title{
+    flex: 1
+}

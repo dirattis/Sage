@@ -1,0 +1,18 @@
+:root {
+    --primary: #004568;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+button.primary{
+    background: var(--primary);
+    color: #fff;
+}
+
+button.primary:hover, button.primary.MuiButton-label:hover{
+    background-color: #0045689e
+}
+
