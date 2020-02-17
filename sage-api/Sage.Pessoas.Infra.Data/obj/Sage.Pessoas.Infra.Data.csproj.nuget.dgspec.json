@@ -1,0 +1,118 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Infra.Data\\Sage.Pessoas.Infra.Data.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Domain\\Sage.Pessoas.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Domain\\Sage.Pessoas.Domain.csproj",
+        "projectName": "Sage.Pessoas.Domain",
+        "projectPath": "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Domain\\Sage.Pessoas.Domain.csproj",
+        "packagesPath": "C:\\Users\\diego.rattis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\diego.rattis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://tsw2k1264iishlg.tokstok.net.br:9073/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Infra.Data\\Sage.Pessoas.Infra.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Infra.Data\\Sage.Pessoas.Infra.Data.csproj",
+        "projectName": "Sage.Pessoas.Infra.Data",
+        "projectPath": "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Infra.Data\\Sage.Pessoas.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\diego.rattis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Infra.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\diego.rattis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://tsw2k1264iishlg.tokstok.net.br:9073/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Domain\\Sage.Pessoas.Domain.csproj": {
+                "projectPath": "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Domain\\Sage.Pessoas.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

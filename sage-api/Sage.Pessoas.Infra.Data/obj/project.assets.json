@@ -1,0 +1,89 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Sage.Pessoas.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Sage.Pessoas.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sage.Pessoas.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sage.Pessoas.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Sage.Pessoas.Domain/Sage.Pessoas.Domain.csproj",
+      "msbuildProject": "../Sage.Pessoas.Domain/Sage.Pessoas.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Sage.Pessoas.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\diego.rattis\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Infra.Data\\Sage.Pessoas.Infra.Data.csproj",
+      "projectName": "Sage.Pessoas.Infra.Data",
+      "projectPath": "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Infra.Data\\Sage.Pessoas.Infra.Data.csproj",
+      "packagesPath": "C:\\Users\\diego.rattis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Infra.Data\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\diego.rattis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://tsw2k1264iishlg.tokstok.net.br:9073/nuget": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Domain\\Sage.Pessoas.Domain.csproj": {
+              "projectPath": "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Domain\\Sage.Pessoas.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
