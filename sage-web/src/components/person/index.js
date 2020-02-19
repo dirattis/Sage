@@ -1,52 +1,15 @@
-import React from "react";
-import TextField from "@material-ui/core/TextField";
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { addPerson } from './person-action';
+import PersonWeb from './person-view';
 
-const Person = () => {
+const mapStateToProps = state => ({ 
+  person: state.personReducer.person
+});
 
-    return (
-      <>
-        <TextField
-            autoFocus
-            margin="dense"
-            label="Nome"
-            type="text"
-            fullWidth
-          />
-           <TextField
-            margin="dense"
-            label="CPF"
-            type="text"
-            fullWidth
-          />
-           <TextField
-            margin="dense"
-            label="Data de Nascimento"
-            type="date"
-            fullWidth
-          />
-          <TextField
-            
-            margin="dense"
-            label="Telefone Residencial"
-            type="phone"
-            fullWidth
-          />
-           <TextField
-            
-            margin="dense"
-            label="Telefone Celular"
-            type="phone"
-            fullWidth
-          />
-           <TextField
-            
-            margin="dense"
-            label="E-mail"
-            type="email"
-            fullWidth
-          />
-        </>
-    )
-}
+const mapDispatchToProps = dispatch => bindActionCreators({
+    addPerson
+}, dispatch);
 
-export default Person;
+export default connect(mapStateToProps, mapDispatchToProps)(PersonWeb);
+

@@ -1,60 +1,52 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 
-const Address = props => {
-
+const Person = props => {
+    console.log(props);
     return (
-      <div {...props}>
+      <div>
         <TextField
             autoFocus
             margin="dense"
-            label="CEP"
+            label="Nome"
             type="text"
             fullWidth
           />
            <TextField
             margin="dense"
-            label="Logradouro"
-            type="text"
-            fullWidth
-          />
-
-          <TextField            
-            margin="dense"
-            label="Número"
+            label="CPF"
             type="text"
             fullWidth
           />
            <TextField
-            
             margin="dense"
-            label="Complemento"
-            type="text"
-            fullWidth
-          />
-           <TextField
-            
-            margin="dense"
-            label="Bairro"
-            type="text"
+            label="Data de Nascimento"
+            type="date"
             fullWidth
           />
           <TextField
             
             margin="dense"
-            label="Cidade"
-            type="text"
+            label="Telefone Residencial"
+            type="phone"
             fullWidth
           />
-          <TextField
+           <TextField
             
             margin="dense"
-            label="Estado"
-            type="text"
+            label="Telefone Celular"
+            type="phone"
+            fullWidth
+          />
+           <TextField
+            
+            margin="dense"
+            label="E-mail"
+            type="email"
             fullWidth
           />
         </div>
     )
 }
 
-export default Address;
+export default Person;

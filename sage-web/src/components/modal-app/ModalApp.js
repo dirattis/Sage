@@ -5,6 +5,8 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from "@material-ui/core/Slide";
+import Fade from '@material-ui/core/Fade';
+import Paper from '@material-ui/core/Paper';
 import Person from "../person";
 import Address from "../address";
 
@@ -15,27 +17,55 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 export default function ModalApp(props) {
 
   const [viewPersonComponent, setViewPersonComponent] = useState(true);
-  function next(){
+  const [title, setTitle] = useState('Pessoa');
+  const timeoutTransition = 500;
+
+  function configNavigationParams() {
     setViewPersonComponent(!viewPersonComponent);
+    setTitle(!viewPersonComponent ? 'Pessoa' : 'Endereço');
+  }
+
+  function save(){
+
   }
 
   return (
-    <div>    
-    <Dialog open={props.open} onClose={props.close} aria-labelledby="form-dialog-title"
-     TransitionComponent={Transition}
-     keepMounted>
-        <DialogTitle id="form-dialog-title">Nova Pessoa</DialogTitle>
+    <div>
+      <Dialog open={props.open} onClose={props.close} aria-labelledby="form-dialog-title"
+        TransitionComponent={Transition}
+        keepMounted>
+        <DialogTitle id="form-dialog-title">{title}</DialogTitle>
         <DialogContent>
-          {viewPersonComponent && <Person />}
-          {!viewPersonComponent && <Address />}
+          {viewPersonComponent &&
+            <Fade in={viewPersonComponent} timeout={timeoutTransition}>
+              <Person />
+            </Fade>
+          }
+          {!viewPersonComponent &&
+            <Fade in={!viewPersonComponent} timeout={timeoutTransition}>
+              <Address />
+            </Fade>
+          }
         </DialogContent>
         <DialogActions>
-          <Button onClick={props.close} color="primary">
-            Cancel
+          {viewPersonComponent && <div>
+            <Button onClick={props.close} color="primary">
+              Cancelar
+            </Button>
+            <Button onClick={configNavigationParams} color="primary">
+              Continue
+            </Button>
+          </div>
+          }
+          {!viewPersonComponent && <div>
+            <Button onClick={configNavigationParams} color="primary">
+              Voltar
           </Button>
-          <Button onClick={next} color="primary">
-            Continue
+            <Button onClick={save} color="primary">
+              Salvar
           </Button>
+          </div>
+          }
         </DialogActions>
       </Dialog>
     </div>

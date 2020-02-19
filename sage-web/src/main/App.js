@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './App.css';
-import Header from './components/header';
+import '../styles/App.css';
+import Header from '../components/header';
 import Container from "@material-ui/core/Container";
-import TableApp from "./components/table-app/TableApp";
+import TableApp from "../components/table-app/TableApp";
 import Button from "@material-ui/core/Button";
-import ModalApp from "./components/modal-app/ModalApp";
+import ModalApp from "../components/modal-app/ModalApp";
 
 function App() {
   const [open, setOpen] = useState(false);
