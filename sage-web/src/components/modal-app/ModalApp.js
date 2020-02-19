@@ -1,59 +1,43 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
+import React, { useState } from 'react';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Slide from "@material-ui/core/Slide";
+import Person from "../person";
+import Address from "../address";
 
-const useStyles = makeStyles(theme => ({
-  modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  paper: {
-    backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
-}));
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="right" ref={ref} {...props} />;
+});
 
 export default function ModalApp(props) {
-  const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const [viewPersonComponent, setViewPersonComponent] = useState(true);
+  function next(){
+    setViewPersonComponent(!viewPersonComponent);
+  }
 
   return (
-    <div>
-      <button type="button" onClick={handleOpen}>
-        react-transition-group
-      </button>
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className={classes.modal}
-        open={this.props.open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={open}>
-          <div className={classes.paper}>
-            <h2 id="transition-modal-title">Transition modal</h2>
-            <p id="transition-modal-description">react-transition-group animates me.</p>
-          </div>
-        </Fade>
-      </Modal>
+    <div>    
+    <Dialog open={props.open} onClose={props.close} aria-labelledby="form-dialog-title"
+     TransitionComponent={Transition}
+     keepMounted>
+        <DialogTitle id="form-dialog-title">Nova Pessoa</DialogTitle>
+        <DialogContent>
+          {viewPersonComponent && <Person />}
+          {!viewPersonComponent && <Address />}
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={props.close} color="primary">
+            Cancel
+          </Button>
+          <Button onClick={next} color="primary">
+            Continue
+          </Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 }

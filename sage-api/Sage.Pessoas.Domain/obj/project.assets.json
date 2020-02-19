@@ -8,19 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\diego.rattis\\.nuget\\packages\\": {}
+    "C:\\Users\\Le novo\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Domain\\Sage.Pessoas.Domain.csproj",
+      "projectUniqueName": "C:\\Dev\\Labs\\Sage\\sage-api\\Sage.Pessoas.Domain\\Sage.Pessoas.Domain.csproj",
       "projectName": "Sage.Pessoas.Domain",
-      "projectPath": "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Domain\\Sage.Pessoas.Domain.csproj",
-      "packagesPath": "C:\\Users\\diego.rattis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\diego.rattis\\source\\repos\\Sage.Pessoas\\Sage.Pessoas.Domain\\obj\\",
+      "projectPath": "C:\\Dev\\Labs\\Sage\\sage-api\\Sage.Pessoas.Domain\\Sage.Pessoas.Domain.csproj",
+      "packagesPath": "C:\\Users\\Le novo\\.nuget\\packages\\",
+      "outputPath": "C:\\Dev\\Labs\\Sage\\sage-api\\Sage.Pessoas.Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\diego.rattis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Le novo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,7 +32,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://tsw2k1264iishlg.tokstok.net.br:9073/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -54,12 +57,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

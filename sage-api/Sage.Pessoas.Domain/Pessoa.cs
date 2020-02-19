@@ -10,8 +10,6 @@ namespace Sage.Pessoas.Domain
 
         public string CPF { get; set; }
 
-        public string RG { get; set; }
-
         public DateTime Nascimento { get; set; }
 
         public string TelefoneResidencial { get; set; }
