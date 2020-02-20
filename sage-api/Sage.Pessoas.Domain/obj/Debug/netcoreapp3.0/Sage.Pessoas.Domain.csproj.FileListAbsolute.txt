@@ -1,0 +1,8 @@
+C:\Labs\Sage\sage-api\Sage.Pessoas.Domain\bin\Debug\netcoreapp3.0\Sage.Pessoas.Domain.deps.json
+C:\Labs\Sage\sage-api\Sage.Pessoas.Domain\bin\Debug\netcoreapp3.0\Sage.Pessoas.Domain.dll
+C:\Labs\Sage\sage-api\Sage.Pessoas.Domain\bin\Debug\netcoreapp3.0\Sage.Pessoas.Domain.pdb
+C:\Labs\Sage\sage-api\Sage.Pessoas.Domain\obj\Debug\netcoreapp3.0\Sage.Pessoas.Domain.csprojAssemblyReference.cache
+C:\Labs\Sage\sage-api\Sage.Pessoas.Domain\obj\Debug\netcoreapp3.0\Sage.Pessoas.Domain.AssemblyInfoInputs.cache
+C:\Labs\Sage\sage-api\Sage.Pessoas.Domain\obj\Debug\netcoreapp3.0\Sage.Pessoas.Domain.AssemblyInfo.cs
+C:\Labs\Sage\sage-api\Sage.Pessoas.Domain\obj\Debug\netcoreapp3.0\Sage.Pessoas.Domain.dll
+C:\Labs\Sage\sage-api\Sage.Pessoas.Domain\obj\Debug\netcoreapp3.0\Sage.Pessoas.Domain.pdb

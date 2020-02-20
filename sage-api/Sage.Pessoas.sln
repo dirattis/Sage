@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sage.Pessoas.API", "Sage.Pessoas.API\Sage.Pessoas.API.csproj", "{16BB19DF-97BE-49BB-9F6D-6302E8E84E24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sage.Pessoas.API", "Sage.Pessoas.API\Sage.Pessoas.API.csproj", "{16BB19DF-97BE-49BB-9F6D-6302E8E84E24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sage.Pessoas.Domain", "Sage.Pessoas.Domain\Sage.Pessoas.Domain.csproj", "{CA1BA3A8-9DE2-456E-A479-CAB275EF3F4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sage.Pessoas.Domain", "Sage.Pessoas.Domain\Sage.Pessoas.Domain.csproj", "{CA1BA3A8-9DE2-456E-A479-CAB275EF3F4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sage.Pessoas.Infra.Data", "Sage.Pessoas.Infra.Data\Sage.Pessoas.Infra.Data.csproj", "{BA0EF0AC-4265-4D32-B18C-224C7CF09953}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sage.Pessoas.Infra.Data", "Sage.Pessoas.Infra.Data\Sage.Pessoas.Infra.Data.csproj", "{BA0EF0AC-4265-4D32-B18C-224C7CF09953}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sage.Pessoas.Infra.CrossCutting.IoC", "Sage.Pessoas.Infra.CrossCutting.IoC\Sage.Pessoas.Infra.CrossCutting.IoC.csproj", "{A3468CF2-499D-401D-9805-61595DB3B305}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{BA0EF0AC-4265-4D32-B18C-224C7CF09953}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA0EF0AC-4265-4D32-B18C-224C7CF09953}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA0EF0AC-4265-4D32-B18C-224C7CF09953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3468CF2-499D-401D-9805-61595DB3B305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3468CF2-499D-401D-9805-61595DB3B305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3468CF2-499D-401D-9805-61595DB3B305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3468CF2-499D-401D-9805-61595DB3B305}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

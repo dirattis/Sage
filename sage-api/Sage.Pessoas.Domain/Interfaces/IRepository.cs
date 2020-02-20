@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sage.Pessoas.Domain.Interfaces
 {
-    public interface IRepository<TEntity> where TEntity : class
+    public interface IRepository<TEntity> where TEntity : Entity
     {
         void Add(TEntity entity);
 
@@ -15,5 +15,9 @@ namespace Sage.Pessoas.Domain.Interfaces
         IEnumerable<TEntity> GetAll();
 
         void Delete(Guid id);
+
+        int SaveChanges();
+
+        void Dispose();
     }
 }

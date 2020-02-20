@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Sage.Pessoas.Domain
 {
-    public class Endereco
+    public class Endereco : Entity
     {
-        public Guid Id { get; set; }
-
-        public int CEP { get; set; }
+        public string CEP { get; set; }
 
         public string Logradouro { get; set; }
 
@@ -21,5 +19,7 @@ namespace Sage.Pessoas.Domain
         public string Cidade { get; set; }
 
         public string Estado { get; set; }
+
+        public virtual Pessoa Pessoa { get; set; }
     }
 }

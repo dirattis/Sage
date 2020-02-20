@@ -6,10 +6,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Sage.Pessoas.Infra.CrossCutting.IoC;
+using Sage.Pessoas.Infra.Data;
 
 namespace Sage.Pessoas.API
 {
@@ -25,7 +28,13 @@ namespace Sage.Pessoas.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddJsonOptions(opt => 
+            {
+                opt.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+                opt.JsonSerializerOptions.IgnoreNullValues = true;
+            });
+            
+            services.RegisterServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
