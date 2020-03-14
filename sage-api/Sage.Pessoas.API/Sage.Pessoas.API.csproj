@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Sage.Pessoas.Infra.CrossCutting.IoC\Sage.Pessoas.Infra.CrossCutting.IoC.csproj" />
+    <ProjectReference Include="..\Sage.Pessoas.Infra.CrossCutting.IoC\Sage.Pessoas.Infra.CrossCutting.Configuration.csproj" />
   </ItemGroup>
 
 

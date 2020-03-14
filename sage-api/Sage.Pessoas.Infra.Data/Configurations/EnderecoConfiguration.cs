@@ -17,6 +17,10 @@ namespace Sage.Pessoas.Infra.Data.Configurations
             builder.Property(x => x.Bairro).HasColumnType("varchar(100)").IsRequired();
             builder.Property(x => x.Cidade).HasColumnType("varchar(50)").IsRequired();
             builder.Property(x => x.Estado).HasColumnType("char(2)").IsRequired();
+
+            builder.HasOne(x => x.Pessoa)
+                .WithOne(x => x.Endereco)
+                .HasForeignKey<Pessoa>(x => x.EnderecoId);
         }
     }
 }

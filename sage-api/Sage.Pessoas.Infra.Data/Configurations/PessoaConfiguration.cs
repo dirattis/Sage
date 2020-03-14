@@ -13,11 +13,7 @@ namespace Sage.Pessoas.Infra.Data.Configurations
             builder.HasKey(x => x.Id);
             builder.Property(x => x.CPF).HasColumnType("char(11)");
             builder.Property(x => x.Nome).HasColumnType("varchar(50)").IsRequired();
-            builder.Property(x => x.Email).HasColumnType("varchar(50)");
-
-            builder.HasOne(x => x.Endereco)
-                .WithOne(x => x.Pessoa)
-                .HasForeignKey<Endereco>(x => x.Id);
+            builder.Property(x => x.Email).HasColumnType("varchar(50)");            
         }
     }
 }

@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sage.Pessoas.Domain", "Sage
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sage.Pessoas.Infra.Data", "Sage.Pessoas.Infra.Data\Sage.Pessoas.Infra.Data.csproj", "{BA0EF0AC-4265-4D32-B18C-224C7CF09953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sage.Pessoas.Infra.CrossCutting.IoC", "Sage.Pessoas.Infra.CrossCutting.IoC\Sage.Pessoas.Infra.CrossCutting.IoC.csproj", "{A3468CF2-499D-401D-9805-61595DB3B305}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sage.Pessoas.Infra.CrossCutting.Configuration", "Sage.Pessoas.Infra.CrossCutting.IoC\Sage.Pessoas.Infra.CrossCutting.Configuration.csproj", "{A3468CF2-499D-401D-9805-61595DB3B305}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

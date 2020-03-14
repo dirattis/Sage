@@ -4,6 +4,7 @@ using Sage.Pessoas.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace Sage.Pessoas.Infra.Data.Repositories
 {
@@ -24,7 +25,7 @@ namespace Sage.Pessoas.Infra.Data.Repositories
         }
 
         public void Update(TEntity entity)
-        {
+        {   
             DbSet.Update(entity);
         }
 
@@ -32,15 +33,41 @@ namespace Sage.Pessoas.Infra.Data.Repositories
         {
             return DbSet.ToList();
         }
-        
+
+        public IEnumerable<TEntity> GetAll<TProp>(params Expression<Func<TEntity, TProp>>[] includes)
+        {
+            var query = DbSet.AsQueryable();
+
+            if (includes?.Count() > 0)
+            {
+                foreach (var prop in includes)
+                    query = query.Include(prop);
+            }
+            return query.ToList();
+        }
+
         public TEntity GetById(Guid id)
         {
             return DbSet.AsNoTracking().FirstOrDefault(t => t.Id == id);
         }
 
+        public TEntity GetById<TProp>(Guid id, params Expression<Func<TEntity, TProp>>[] includes)
+        {
+            var query = DbSet.AsQueryable();
+
+            if (includes?.Count() > 0)
+            {
+                foreach (var prop in includes)
+                    query = query.Include(prop);
+            }
+            
+            return query.AsNoTracking().FirstOrDefault(t => t.Id == id);
+        }
+
         public void Delete(Guid id)
         {
             DbSet.Remove(DbSet.Find(id));
+            SaveChanges();
         }
         public int SaveChanges()
         {
