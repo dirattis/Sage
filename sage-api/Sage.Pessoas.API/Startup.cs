@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Sage.Pessoas.API.Middlewares;
 using Sage.Pessoas.Infra.CrossCutting.Configuration;
 using Sage.Pessoas.Infra.CrossCutting.Configuration.AutoMapper;
 using Sage.Pessoas.Infra.Data;
@@ -37,18 +38,19 @@ namespace Sage.Pessoas.API
             
             services.RegisterServices();
 
-            services.AddAutoMapperConfig(typeof(Startup));
-
+            services.AddAutoMapperConfig(typeof(Startup));          
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseConfigureExceptionHandler(logger);
 
             app.UseHttpsRedirection();
 
@@ -60,6 +62,7 @@ namespace Sage.Pessoas.API
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }

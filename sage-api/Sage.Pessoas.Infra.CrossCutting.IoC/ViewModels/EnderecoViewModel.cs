@@ -3,7 +3,7 @@ using System;
 
 namespace Sage.Pessoas.Infra.CrossCutting.Configuration.ViewModels
 {
-    public class EnderecoViewModel
+    public class EnderecoViewModel 
     {
         public string CEP { get; set; }
 

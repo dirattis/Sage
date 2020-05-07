@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Sage.Pessoas.Domain;
 using Sage.Pessoas.Domain.Interfaces;
 using Sage.Pessoas.Infra.CrossCutting.Configuration.ViewModels;
+using Sage.Pessoas.Infra.CrossCutting.Configuration.Extensions;
 
 namespace Sage.Pessoas.API.Controllers
 {
@@ -15,27 +16,34 @@ namespace Sage.Pessoas.API.Controllers
     [Route("pessoas")]
     public class PessoaController : ControllerBase
     {
-        private readonly ILogger<PessoaController> _logger;
         private readonly IPessoaRepository _repository;
         private readonly IMapper _mapper;
 
-        public PessoaController(ILogger<PessoaController> logger, IPessoaRepository repository, IMapper mapper)
+        public PessoaController(IPessoaRepository repository, IMapper mapper)
         {
-            _logger = logger;
             _repository = repository;
             _mapper = mapper;
         }
 
         [HttpGet]
-        public IEnumerable<PessoaViewModel> Get()
+        public ActionResult<ResponseData<IEnumerable<PessoaViewModel>>> Get()
         {
-            return _mapper.Map<IEnumerable<PessoaViewModel>>(_repository.GetAll(x => x.Endereco));
+            var pessoas = _mapper.Map<IEnumerable<PessoaViewModel>>(_repository.GetAll(x => x.Endereco));
+            if (pessoas == null)
+                return NoContent();
+          
+            return Ok(pessoas.ToResponse());
         }
 
         [HttpGet("{id:guid}")]
-        public PessoaViewModel GetById(Guid id)
+        public IActionResult GetById(Guid id)
         {
-            return _mapper.Map<PessoaViewModel>(_repository.GetById(id, x => x.Endereco));
+            var pessoa = _mapper.Map<PessoaViewModel>(_repository.GetById(id, x => x.Endereco));
+
+            if (pessoa == null)
+                return NoContent();
+
+            return Ok(pessoa.ToResponse());
         }
 
 
@@ -48,7 +56,7 @@ namespace Sage.Pessoas.API.Controllers
             var pessoa = _mapper.Map<Pessoa>(pessoaVM);
             var created = _mapper.Map<PessoaViewModel>(_repository.Save(pessoa));
 
-            return Created(nameof(Get), created);
+            return Created(nameof(Get), created.ToResponse());
         }
 
         [HttpPut]
@@ -59,8 +67,7 @@ namespace Sage.Pessoas.API.Controllers
 
             if (!pessoaVM.Id.HasValue)
             {
-                var response = new ResponseData();
-                response.Errors.Add("O Id é obrigatório para a atualização.");
+                var response = new ResponseData("O Id é obrigatório para a atualização.");
                 return BadRequest(response);
             }               
 
@@ -71,7 +78,7 @@ namespace Sage.Pessoas.API.Controllers
 
             var updated = _mapper.Map<PessoaViewModel>(_repository.Save(pessoa));
 
-            return Ok(updated);
+            return Ok(updated.ToResponse());
         }
 
         [HttpDelete("{id:guid}")]

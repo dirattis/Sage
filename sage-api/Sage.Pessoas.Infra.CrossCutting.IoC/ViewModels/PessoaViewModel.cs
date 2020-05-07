@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Sage.Pessoas.Infra.CrossCutting.Configuration.ViewModels
 {
-    public class PessoaViewModel
+    public class PessoaViewModel 
     {
         public Guid? Id { get; set; }
 
